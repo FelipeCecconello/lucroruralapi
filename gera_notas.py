@@ -1,7 +1,7 @@
 import requests
 
 file = open("notafiscal.csv", "r")
-endpoint_post_fornecedor = 'http://127.0.0.1:5000/nota'
+endpoint_post_fornecedor = 'https://lucroruralapi.herokuapp.com/nota'
 headers_post = {
     'Content-Type': 'application/json'
 }
