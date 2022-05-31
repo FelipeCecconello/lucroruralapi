@@ -6,6 +6,7 @@ from resources.fornecedor import Fornecedor
 from sql_alchemy import banco
 import json
 from uuid import UUID
+import os
 
 class UUIDEncoder(json.JSONEncoder):
     def default(self, obj: any) -> any:  # pylint:disable=arguments-differ
@@ -33,3 +34,7 @@ api.add_resource(Fornecedor, '/fornecedor')
 api.add_resource(NotaFiscal, '/nota')
 api.add_resource(Contas, '/contas')
 api.add_resource(Conta, '/conta/<string:conta_id>')
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
