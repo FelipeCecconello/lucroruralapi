@@ -20,7 +20,7 @@ class MyConfig(object):
 
 app = Flask(__name__)
 app.config.from_object(MyConfig)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://vtcbmzyisipnfr:4b10a3e522810e078e866429a4bc97f8367bdfe13c16b2b3f5ca317e994ee113@ec2-44-196-174-238.compute-1.amazonaws.com:5432/dagtnujslhn4op'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gfrophgmujolkb:195fb559e934358036bec95429b9ed32f12df5f9971ebf4e3ca5af1fc2271adc@ec2-3-234-131-8.compute-1.amazonaws.com:5432/d5u9ded7qb9f1i'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 banco.init_app(app)
 api = Api(app)
